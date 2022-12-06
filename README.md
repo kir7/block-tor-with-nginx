@@ -7,11 +7,12 @@
 ```
 00 05 * * * sh /etc/nginx/block-tor.sh
 ```
-3) Include Tor Exit List in nginx configuration file
+3) Create empty file `tor-ip-list.conf` in `/etc/nginx/conf.d/` or run `block-tor.sh` manually
+4) Include Tor Exit List in nginx configuration file
 ```
 include /etc/nginx/conf.d/tor-ip-list.conf;
 ```
-4) Test the configuration file
+5) Test the configuration file
 ```
 sudo nginx -t
 ```
